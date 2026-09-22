@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa no Condomínio Viverde II | João de Souza Construções</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0f172a',       // Azul Marinho Escuro
+                            navyLight: '#1e293b',  // Azul Marinho Secundário
+                            gold: '#c5a059',       // Dourado/Bronze
+                            goldHover: '#b38d45',  // Dourado Hover
+                            light: '#f8fafc',      // Fundo Off-white
+                            gray: '#64748b'        // Textos secundários
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS para Animações Extras -->
+    <style>
+        /* Efeito de pulse para o WhatsApp */
+        @keyframes pulse-whatsapp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .btn-whatsapp {
+            animation: pulse-whatsapp 2s infinite;
+        }
+        
+        /* Ajuste para imagem hero escura */
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.6) 100%);
+        }
+    </style>
+</head>
+<body class="font-sans bg-brand-light text-gray-800 antialiased selection:bg-brand-gold selection:text-white">
+
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="logo_3_sem_fundo.png" alt="Logo" class="h-10 md:h-12 w-auto object-contain mr-3">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-bold text-xl md:text-2xl text-brand-navy leading-none">
+                            João de Souza <span class="text-brand-gold">Construções</span>
+                        </span>
+                        <span class="text-[10px] md:text-xs text-gray-500 tracking-wider mt-1 uppercase font-semibold">
+                            Construtora em São Pedro da Aldeia
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#imovel" class="text-sm font-semibold text-gray-600 hover:text-brand-gold transition-colors">O Imóvel</a>
+                    <a href="#beneficios" class="text-sm font-semibold text-gray-600 hover:text-brand-gold transition-colors">Diferenciais</a>
+                    <a href="#localizacao" class="text-sm font-semibold text-gray-600 hover:text-brand-gold transition-colors">Localização</a>
+                    <a href="#oferta" class="bg-brand-navy text-white px-5 py-2.5 rounded-md font-semibold hover:bg-brand-gold transition-colors shadow-lg">Fale Conosco</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-navy hover:text-brand-gold focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg px-4 pt-4 pb-6 space-y-3">
+            <a href="#imovel" class="block text-base font-semibold text-gray-600 hover:text-brand-gold transition-colors">O Imóvel</a>
+            <a href="#beneficios" class="block text-base font-semibold text-gray-600 hover:text-brand-gold transition-colors">Diferenciais</a>
+            <a href="#localizacao" class="block text-base font-semibold text-gray-600 hover:text-brand-gold transition-colors">Localização</a>
+            <a href="#oferta" class="block bg-brand-navy text-white text-center px-5 py-3 mt-4 rounded-md font-semibold hover:bg-brand-gold transition-colors">Fale Conosco</a>
+        </div>
+    </header>
+
+    <section class="relative h-screen flex items-center min-h-[600px] pt-20">
+        <!-- Background Image com Placeholder de Casa Moderna -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fachada da casa moderna" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+            <div class="max-w-3xl">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-gold/20 text-brand-gold border border-brand-gold/50 text-sm font-semibold tracking-wider uppercase mb-4">
+                    Pronto para Morar
+                </span>
+                <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
+                    <span class="text-brand-gold border-b-4 border-brand-gold/30"><p>Viverde II</p></span>Construindo o<span class="text-brand-gold"> futuro</span>.
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl font-light leading-relaxed">
+                    Descubra o conforto absoluto de viver bem na melhor localização do <strong>Condomínio Viverde II</strong>. Design moderno, segurança e qualidade de vida para sua família.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/5522997662533?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita!" target="_blank" class="flex items-center justify-center bg-brand-gold hover:bg-brand-goldHover text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(197,160,89,0.3)]">
+                        <i class="fa-brands fa-whatsapp text-2xl mr-3"></i> Falar com um Consultor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 1 (Original: Foto à esquerda, Texto à direita) -->
+    <section id="imovel" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Imagem Ilustrativa -->
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-brand-gold/20 transform rotate-2 rounded-xl transition duration-500 group-hover:rotate-1"></div>
+                    <img src="novaspa_fachada.png" alt="Interior da Casa" class="relative rounded-xl shadow-2xl w-full h-auto" />
+                </div>
+                
+                <!-- Textos Persuasivos -->
+                <div>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mb-6 leading-tight">
+                        Chegou a hora de elevar o seu <span class="text-brand-gold border-b-4 border-brand-gold/30">padrão de vida</span>.
+                    </h2>
+                    
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        
+                        <div class="font-medium text-brand-navy border-l-4 border-brand-gold pl-4 bg-brand-light p-4 rounded-r-md flex flex-col gap-2">
+                            <p>• Uma casa com projeto arquitetônico inteligente.</p>
+                            <p>• pensada em cada detalhe para maximizar o seu bem-estar.</p>
+                            <p>• Acabamento impecável, iluminação natural</p>
+                            <p>• Negociação direto com quem constrói o seu sonho.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2 (Invertida: Texto à esquerda, Foto à direita) -->
+    <section id="imovel-2" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Imagem Ilustrativa -->
+                <div class="relative group lg:order-2">
+                    <div class="absolute -inset-4 bg-brand-gold/20 transform rotate-2 rounded-xl transition duration-500 group-hover:rotate-1"></div>
+                    <img src="novaspa_sala_e_cozinha.png" alt="Interior da Casa" class="relative rounded-xl shadow-2xl w-full h-auto" />
+                </div>
+                
+                <!-- Textos Persuasivos -->
+                <div class="lg:order-1">
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mb-6 leading-tight">
+                        Sala e Cozinha <span class="text-brand-gold border-b-4 border-brand-gold/30">Integrada</span>.
+                    </h2>
+                    
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        
+                        <div class="font-medium text-brand-navy border-l-4 border-brand-gold pl-4 bg-brand-light p-4 rounded-r-md flex flex-col gap-2">
+                            <p>• Conceito inteligente que une a sala de estar e a cozinha, ambiente majestoso e livre de paredes obstrutivas.</p>
+                            <p>• Pé-direito visivelmente alto, imponência e sofisticação, além de melhorar o conforto térmico do ambiente.</p>
+                            <p>• Conexão visual e física direta com a área gourmet no fundo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3 (Original: Foto à esquerda, Texto à direita) -->
+    <section id="imovel-3" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Imagem Ilustrativa -->
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-brand-gold/20 transform rotate-2 rounded-xl transition duration-500 group-hover:rotate-1"></div>
+                    <img src="novaspa_gourmet_1.png" alt="Interior da Casa" class="relative rounded-xl shadow-2xl w-full h-auto" />
+                </div>
+                
+                <!-- Textos Persuasivos -->
+                <div>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mb-6 leading-tight">
+                        Área <span class="text-brand-gold border-b-4 border-brand-gold/30">Gourmet</span>.
+                    </h2>
+                    
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        
+                        <div class="font-medium text-brand-navy border-l-4 border-brand-gold pl-4 bg-brand-light p-4 rounded-r-md flex flex-col gap-2">
+                            <p>• Integração inteligente com o interior da casa, portas de correr em vidro.</p>
+                            <p>• Estrutura completa de churrasqueira com pia, bancada e revestimento decorativo, pronta para seus eventos.</p>
+                            <p>• Ambiente totalmente coberto sob laje. Seu lazer com conforto em qualquer condição climática.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4 (Invertida: Texto à esquerda, Foto à direita) -->
+    <section id="imovel-4" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Imagem Ilustrativa -->
+                <div class="relative group lg:order-2">
+                    <div class="absolute -inset-4 bg-brand-gold/20 transform rotate-2 rounded-xl transition duration-500 group-hover:rotate-1"></div>
+                    <img src="novaspa_gourmet_2.png" alt="Interior da Casa" class="relative rounded-xl shadow-2xl w-full h-auto" />
+                </div>
+                
+                <!-- Textos Persuasivos -->
+                <div class="lg:order-1">
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mb-6 leading-tight">
+                        Área <span class="text-brand-gold border-b-4 border-brand-gold/30">Gourmet</span>.
+                    </h2>
+                    
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        
+                        <div class="font-medium text-brand-navy border-l-4 border-brand-gold pl-4 bg-brand-light p-4 rounded-r-md flex flex-col gap-2">
+                            <p>• Varanda ampla e iluminação embutida, valorizando a estética geral da fachada traseira.</p>
+                            <p>• Corredor lateral aberto e acesso independente de convidados direto para a área de lazer.</p>
+                            <p>• Quintal funcional com área gramada e espaço perfeito para famílias com crianças ou pets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 5 (Original: Foto à esquerda, Texto à direita) -->
+    <section id="imovel-5" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Imagem Ilustrativa -->
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-brand-gold/20 transform rotate-2 rounded-xl transition duration-500 group-hover:rotate-1"></div>
+                    <img src="novaspa_dormitorio_suite.png" alt="Interior da Casa" class="relative rounded-xl shadow-2xl w-full h-auto" />
+                </div>
+                
+                <!-- Textos Persuasivos -->
+                <div>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mb-6 leading-tight">
+                        Dormitório <span class="text-brand-gold border-b-4 border-brand-gold/30">com suíte</span>.
+                    </h2>
+                    
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        
+                        <div class="font-medium text-brand-navy border-l-4 border-brand-gold pl-4 bg-brand-light p-4 rounded-r-md flex flex-col gap-2">
+                            <p>• Privacidade e conforto com suíte exclusiva, um refúgio para o seu descanso.</p>
+                            <p>• iluminação e ventilação naturais garantidas pela janela ampla, ambiente sempre fresco e arejado.</p>
+                            <p>• Acabamento em tons neutros e piso moderno, pronto para receber qualquer estilo de móveis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mb-4">
+                Detalhes que Fazem a Diferença
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-16 text-lg">
+                Tudo foi projetado pensando em você e no seu bem-estar diário.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="w-16 h-16 mx-auto bg-brand-navy/5 text-brand-gold rounded-full flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-bed"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-brand-navy mb-3">3 Dormitórios</h3>
+                    <p class="text-gray-500 text-sm">Amplo espaço para toda família, incluindo 1 suíte master desenhada para o seu descanso absoluto.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="w-16 h-16 mx-auto bg-brand-navy/5 text-brand-gold rounded-full flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-brand-navy mb-3">Ambientes Integrados</h3>
+                    <p class="text-gray-500 text-sm">Sala e cozinha integradas, criando um ambiente perfeito para convivência e sofisticação.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="w-16 h-16 mx-auto bg-brand-navy/5 text-brand-gold rounded-full flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-fire-burner"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-brand-navy mb-3">Espaço Gourmet</h3>
+                    <p class="text-gray-500 text-sm">A sua nova área de lazer particular, projetada com churrasqueira para celebrar os melhores momentos.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="w-16 h-16 mx-auto bg-brand-navy/5 text-brand-gold rounded-full flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-brand-navy mb-3">Cuidado em Cada Detalhe</h3>
+                    <p class="text-gray-500 text-sm">Materiais de primeira linha, revestimentos modernos e acabamentos que traduzem qualidade de vida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="oferta" class="py-20 bg-brand-navy relative overflow-hidden">
+        <!-- Elemento de fundo decorativo -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-navyLight opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brand-gold/10 blur-3xl"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-heading text-3xl sm:text-5xl font-bold text-white mb-6">
+                Um Investimento em <span class="text-brand-gold">Qualidade de Vida</span>
+            </h2>
+            
+            <div class="my-10 inline-block bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-8 sm:px-16 shadow-2xl">
+                <p class="text-gray-300 uppercase tracking-widest text-sm font-semibold mb-2">Valor do Imóvel</p>
+                <div class="font-heading text-5xl sm:text-7xl font-extrabold text-brand-gold drop-shadow-md">
+                    R$ 890.000
+                </div>
+                <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-300 font-medium">
+                    <span class="flex items-center"><i class="fa-solid fa-check text-green-400 mr-2"></i> Financiamento Caixa</span>
+                    <span class="hidden sm:inline text-gray-500">•</span>
+                    <span class="flex items-center"><i class="fa-solid fa-handshake text-brand-gold mr-2"></i> Negocie Direto com a Construtora</span>
+                </div>
+            </div>
+
+            <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                Fale conosco agora e comece uma nova fase na sua vida. Nossos especialistas estão prontos para tirar todas as suas dúvidas.
+            </p>
+
+            <a href="https://wa.me/5522997662533?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita!" target="_blank" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-md font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-[0_10px_30px_rgba(34,197,94,0.3)]">
+                <i class="fa-brands fa-whatsapp text-3xl mr-3"></i> Quero Agendar uma Visita
+            </a>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO DE CLIENTES / AUTORIDADE -->
+    <section id="sobre" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Fotos e Nomes -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 mb-16">
+                <!-- Perfil 1 -->
+                <div class="text-center group">
+                    <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-xl mb-6 mx-auto transform transition duration-500 group-hover:scale-105 group-hover:border-brand-gold">
+                        <img src="ronald.jpeg" alt="Ronald Souza" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="font-heading font-bold text-2xl text-brand-navy">Ronald Souza</h3>
+                </div>
+                
+                <!-- Perfil 2 -->
+                <div class="text-center group">
+                    <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-xl mb-6 mx-auto transform transition duration-500 group-hover:scale-105 group-hover:border-brand-gold">
+                        <img src="elcio.jpeg" alt="Élcio Junior" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="font-heading font-bold text-2xl text-brand-navy">Élcio Junior</h3>
+                </div>
+            </div>
+
+            <!-- Card de Estatísticas com Contadores Animados -->
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 max-w-5xl mx-auto relative overflow-hidden">
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="py-4 md:py-0 text-center flex flex-col justify-center">
+                        <div class="text-5xl md:text-6xl font-extrabold text-brand-navy mb-3">+<span class="counter" data-target="15">0</span></div>
+                        <div class="text-xs md:text-sm font-semibold text-gray-400 tracking-widest uppercase">Anos de Experiência</div>
+                    </div>
+                    <div class="py-4 md:py-0 text-center flex flex-col justify-center">
+                        <div class="text-5xl md:text-6xl font-extrabold text-brand-gold mb-3">+<span class="counter" data-target="350">0</span></div>
+                        <div class="text-xs md:text-sm font-semibold text-gray-400 tracking-widest uppercase">Projetos Entregues</div>
+                    </div>
+                    <div class="py-4 md:py-0 text-center flex flex-col justify-center">
+                        <div class="text-5xl md:text-6xl font-extrabold text-brand-navy mb-3"><span class="counter" data-target="100">0</span>%</div>
+                        <div class="text-xs md:text-sm font-semibold text-gray-400 tracking-widest uppercase">Aprovação Legal</div>
+                    </div>
+                </div>
+                
+                <div class="relative z-10 text-center mt-12 pt-12 border-t border-gray-100">
+                    <p class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4">Obras Concluídas</p>
+                    <h3 class="font-heading text-2xl md:text-4xl font-bold text-brand-navy mb-4">Excelência materializada em cada detalhe</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="localizacao" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mb-4">
+                    Localização Estratégica
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    Venha nos visitar em nosso escritório em São Pedro da Aldeia.
+                </p>
+            </div>
+
+            <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-100 flex flex-col lg:flex-row">
+                <!-- Info do Endereço -->
+                <div class="bg-brand-navyLight text-white p-10 lg:w-1/3 flex flex-col justify-center">
+                    <h3 class="font-heading text-2xl font-bold mb-6 text-brand-gold">Nosso Endereço</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1.5 text-xl mr-4 text-brand-gold"></i>
+                            <div>
+                                <p class="font-semibold text-lg">João de Souza Construções</p>
+                                <p class="text-gray-300 mt-1">R. Hermógenes Freire da Costa, 02 - Loja 01<br>Centro, São Pedro da Aldeia - RJ<br>CEP: 28940-000</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone text-xl mr-4 text-brand-gold"></i>
+                            <a href="tel:+5522997662533" class="text-gray-300 hover:text-white transition-colors text-lg">(22) 99766-2533</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Google Maps Iframe -->
+                <div class="lg:w-2/3 h-[400px] lg:h-auto w-full relative">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=R.%20Hermogenes%20Freire%20da%20Costa,%2002%20-%20loja%2001%20-%20Centro,%20S%C3%A3o%20Pedro%20da%20Aldeia%20-%20RJ&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        class="absolute inset-0 w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-navy border-t border-white/10 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <!-- Logo Footer -->
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <span class="font-heading font-bold text-2xl text-white">
+                        João de Souza <span class="text-brand-gold">Construções</span>
+                    </span>
+                    <p class="text-gray-400 mt-2 text-sm max-w-sm">Construindo sonhos e entregando qualidade de vida na Região dos Lagos.</p>
+                </div>
+                
+                <!-- Links Úteis -->
+                <div class="text-center md:text-right">
+                    <p class="text-white font-semibold mb-4">Links Rápidos</p>
+                    <div class="flex space-x-6 justify-center md:justify-end">
+                        <a href="#imovel" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">O Imóvel</a>
+                        <a href="#beneficios" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Diferenciais</a>
+                        <a href="https://wa.me/5522997662533?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita!" target="_blank" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Contato</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2026 João de Souza Construções. Todos os direitos reservados.</p>
+                <p class="mt-2 md:mt-0">CNPJ: 23.286.837/0001-44</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flutuante com Animação Pulse -->
+    <a href="https://wa.me/5522997662533?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita!" 
+       target="_blank" 
+       class="btn-whatsapp fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1ebd5a] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_15px_rgba(0,0,0,0.3)] z-50 transition-colors duration-300"
+       aria-label="Contato pelo WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts (Menu Mobile e Animação Numérica) -->
+    <script>
+        // Funcionalidade do Menu Mobile
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Animação de Contagem Crescente (Counters)
+        const counters = document.querySelectorAll('.counter');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    counters.forEach(counter => {
+                        const target = +counter.getAttribute('data-target');
+                        const duration = 2000; // Duração da animação em milissegundos
+                        const increment = target / (duration / 16); // Incremento baseado em ~60fps
+                        let currentCount = 0;
+
+                        const updateCounter = () => {
+                            currentCount += increment;
+                            if (currentCount < target) {
+                                counter.innerText = Math.ceil(currentCount);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+                        updateCounter();
+                    });
+                    // Para a animação de ocorrer novamente após disparar uma vez
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const statsSection = document.getElementById('sobre');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    </script>
+</body>
+</html>
