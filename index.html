@@ -133,10 +133,59 @@
     <section id="imovel" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <!-- Imagem Ilustrativa -->
+                <!-- Imagem Ilustrativa Slider -->
                 <div class="relative group">
-                    <div class="absolute -inset-4 bg-brand-gold/20 transform rotate-2 rounded-xl transition duration-500 group-hover:rotate-1"></div>
-                    <img src="residencialv_fachada1.jpg" alt="Interior da Casa" class="relative rounded-xl shadow-2xl w-full h-auto" />
+                    <div class="absolute -inset-4 bg-brand-gold/20 transform rotate-2 rounded-xl transition duration-500 group-hover:rotate-1 z-0"></div>
+                    
+                    <div class="relative w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl z-10 bg-brand-navy">
+                        <div id="imovel-slider" class="relative w-full h-full">
+                            <!-- Slides -->
+                            <img src="1.jpeg" alt="Fachada Viverde I" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-100 z-10">
+                            <img src="2.jpeg" alt="Interior Viverde I 2" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="3.jpeg" alt="Interior Viverde I 3" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="novaspa_fachada.png" alt="Área Gourmet Viverde I" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="5.jpeg" alt="Interior Viverde I 4" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="6.jpeg" alt="Interior Viverde I 5" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="novaspa_gourmet_1.png" alt="Interior Viverde I 6" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="novaspa_gourmet_2.png" alt="Sala e Cozinha Viverde I" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="novaspa_sala_e_cozinha.png" alt="Interior Viverde I 7" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="9.jpeg" alt="Interior Viverde I 10" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="10.jpeg" alt="Interior Viverde I 11" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="novaspa_dormitorio_suite.png" alt="Interior Viverde I 9" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="12.jpeg" alt="Interior Viverde I 13" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="13.jpeg" alt="Interior Viverde I 14" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="14.jpeg" alt="Interior Viverde I 15" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="15.jpeg" alt="Interior Viverde I 15" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+                            <img src="16.jpeg" alt="Interior Viverde I 15" class="imovel-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 z-0">
+
+                            <!-- Controls -->
+                            <button id="prev-slide" class="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full z-20 transition-colors shadow-lg">
+                                <i class="fa-solid fa-chevron-left text-sm md:text-base"></i>
+                            </button>
+                            <button id="next-slide" class="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full z-20 transition-colors shadow-lg">
+                                <i class="fa-solid fa-chevron-right text-sm md:text-base"></i>
+                            </button>
+                            
+                            <!-- Indicators -->
+                            <div class="absolute bottom-3 md:bottom-4 left-0 right-0 flex justify-center gap-1.5 md:gap-2 z-20 flex-wrap px-4">
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-brand-gold transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                                <button class="imovel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/60 transition-colors shadow-sm"></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Textos Persuasivos -->
@@ -145,134 +194,69 @@
                         Chegou a hora de elevar o seu <span class="text-brand-gold border-b-4 border-brand-gold/30">padrão de vida</span>.
                     </h2>
                     
-                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                    <div class="space-y-6 text-gray-600 text-base md:text-lg leading-relaxed">
                         
-                        <div class="font-medium text-brand-navy border-l-4 border-brand-gold pl-4 bg-brand-light p-4 rounded-r-md flex flex-col gap-2">
-                            <p>• Estrutura moderna destacada por amplas varandas equipadas com vidros temperados Blindex.</p>
-                            <p>• Revestimento externo de pastilhas e acabamento com tinta Suvinil. Proteção e durabilidade.</p>
-                            <p>• Entrada térrea fechada por portão de grade. Segurança e controle de acesso.</p>
-                            <p>• Negociação direto com quem constrói o seu sonho.</p>
+                        <div class="font-medium text-brand-navy border-l-4 border-brand-gold pl-4 bg-brand-light p-5 rounded-r-md flex flex-col gap-3">
+                            <p class="flex items-center gap-3"><i class="fa-solid fa-sun text-brand-gold w-5 text-center"></i> Sol da manhã</p>
+                            <p class="flex items-center gap-3"><i class="fa-solid fa-ruler-combined text-brand-gold w-5 text-center"></i> 126 m² de área construída</p>
+                            <p class="flex items-center gap-3"><i class="fa-solid fa-vector-square text-brand-gold w-5 text-center"></i> 252 m² de terreno</p>
+                            <p class="flex items-center gap-3"><i class="fa-solid fa-temperature-half text-brand-gold w-5 text-center"></i> Sistema de água quente e fria</p>
+                            <p class="flex items-center gap-3"><i class="fa-solid fa-solar-panel text-brand-gold w-5 text-center"></i> Preparação para instalação de energia solar</p>
+                            <p class="flex items-center gap-3"><i class="fa-solid fa-plug text-brand-gold w-5 text-center"></i> Boiler elétrico de 300 litros</p>
+                            <p class="flex items-center gap-3"><i class="fa-solid fa-droplet text-brand-gold w-5 text-center"></i> Cisterna de 4.000 litros</p>
+                            <p class="flex items-center gap-3"><i class="fa-solid fa-layer-group text-brand-gold w-5 text-center"></i> Impermeabilização com manta asfáltica</p>
+                            <p class="flex items-center gap-3"><i class="fa-regular fa-building text-brand-gold w-5 text-center"></i> Condomínio: R$ 400,00</p>
+                            <p class="flex items-center gap-3"><i class="fa-solid fa-file-invoice-dollar text-brand-gold w-5 text-center"></i> IPTU: R$ 3.006,00</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Lógica do Slider -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const imovelSlides = document.querySelectorAll('.imovel-slide');
+                const imovelDots = document.querySelectorAll('.imovel-dot');
+                const btnPrev = document.getElementById('prev-slide');
+                const btnNext = document.getElementById('next-slide');
+                let currIndex = 0;
 
-    <!-- SEÇÃO 2 (Invertida: Texto à esquerda, Foto à direita) -->
-    <section id="imovel-2" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <!-- Imagem Ilustrativa -->
-                <div class="relative group lg:order-2">
-                    <div class="absolute -inset-4 bg-brand-gold/20 transform rotate-2 rounded-xl transition duration-500 group-hover:rotate-1"></div>
-                    <img src="residencialv_recepcao_elevador.jpeg" alt="Interior da Casa" class="relative rounded-xl shadow-2xl w-full h-auto" />
-                </div>
-                
-                <!-- Textos Persuasivos -->
-                <div class="lg:order-1">
-                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mb-6 leading-tight">
-                        Recepção e <span class="text-brand-gold border-b-4 border-brand-gold/30">Elevador</span>.
-                    </h2>
+                function showImovelSlide(index) {
+                    imovelSlides.forEach(s => {
+                        s.classList.remove('opacity-100', 'z-10');
+                        s.classList.add('opacity-0', 'z-0');
+                    });
+                    imovelDots.forEach(d => {
+                        d.classList.remove('bg-brand-gold');
+                        d.classList.add('bg-white/60');
+                    });
                     
-                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
-                        
-                        <div class="font-medium text-brand-navy border-l-4 border-brand-gold pl-4 bg-brand-light p-4 rounded-r-md flex flex-col gap-2">
-                            <p>• Acesso prático aos andares superiores.</p>
-                            <p>• Hall com divisória em vidro e portas equipadas com fechaduras Papaiz. Sofisticado e altamente seguro.</p>
-                            <p>• Ambiente de circulação com acabamento moderno.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    imovelSlides[index].classList.remove('opacity-0', 'z-0');
+                    imovelSlides[index].classList.add('opacity-100', 'z-10');
+                    imovelDots[index].classList.remove('bg-white/60');
+                    imovelDots[index].classList.add('bg-brand-gold');
+                }
 
-    <!-- SEÇÃO 3 (Original: Foto à esquerda, Texto à direita) -->
-    <section id="imovel-3" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <!-- Imagem Ilustrativa -->
-                <div class="relative group">
-                    <div class="absolute -inset-4 bg-brand-gold/20 transform rotate-2 rounded-xl transition duration-500 group-hover:rotate-1"></div>
-                    <img src="residencialv_sala_com_varanda.jpeg" alt="Interior da Casa" class="relative rounded-xl shadow-2xl w-full h-auto" />
-                </div>
-                
-                <!-- Textos Persuasivos -->
-                <div>
-                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mb-6 leading-tight">
-                        Sala Com <span class="text-brand-gold border-b-4 border-brand-gold/30">Varanda</span>.
-                    </h2>
+                if(imovelSlides.length > 0) {
+                    btnNext.addEventListener('click', () => {
+                        currIndex = (currIndex + 1) % imovelSlides.length;
+                        showImovelSlide(currIndex);
+                    });
                     
-                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
-                        
-                        <div class="font-medium text-brand-navy border-l-4 border-brand-gold pl-4 bg-brand-light p-4 rounded-r-md flex flex-col gap-2">
-                            <p>• Acesso direto à varanda com proteção em Blindex, ampliando o uso da área social.</p>
-                            <p>• Ambiente claro e naturalmente arejado, com portas de correr.</p>
-                            <p>• Revestimento de com pisos Eliane de tons claros. Sensação de amplitude e requinte no cômodo.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    btnPrev.addEventListener('click', () => {
+                        currIndex = (currIndex - 1 + imovelSlides.length) % imovelSlides.length;
+                        showImovelSlide(currIndex);
+                    });
 
-    <!-- SEÇÃO 4 (Invertida: Texto à esquerda, Foto à direita) -->
-    <section id="imovel-4" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <!-- Imagem Ilustrativa -->
-                <div class="relative group lg:order-2">
-                    <div class="absolute -inset-4 bg-brand-gold/20 transform rotate-2 rounded-xl transition duration-500 group-hover:rotate-1"></div>
-                    <img src="residencialv_cozinha.jpeg" alt="Interior da Casa" class="relative rounded-xl shadow-2xl w-full h-auto" />
-                </div>
-                
-                <!-- Textos Persuasivos -->
-                <div class="lg:order-1">
-                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mb-6 leading-tight">
-                        Cozinha e Área de <span class="text-brand-gold border-b-4 border-brand-gold/30">Serviço</span>.
-                    </h2>
-                    
-                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
-                        
-                        <div class="font-medium text-brand-navy border-l-4 border-brand-gold pl-4 bg-brand-light p-4 rounded-r-md flex flex-col gap-2">
-                            <p>• Bancada espaçosa com pia embutida e gaveteiros na parte inferior, contando com a confiabilidade dos encanamentos Tigre.</p>
-                            <p>• Ambiente com alta entrada de luz natural equipada com tanque de lavar.</p>
-                            <p>• Paredes e piso com acabamento premium utilizando pisos e revestimentos Eliane em tons claros, facilitando a limpeza diária.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 5 (Original: Foto à esquerda, Texto à direita) -->
-    <section id="imovel-5" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <!-- Imagem Ilustrativa -->
-                <div class="relative group">
-                    <div class="absolute -inset-4 bg-brand-gold/20 transform rotate-2 rounded-xl transition duration-500 group-hover:rotate-1"></div>
-                    <img src="residencialv_gourmet.jpeg" alt="Interior da Casa" class="relative rounded-xl shadow-2xl w-full h-auto" />
-                </div>
-                
-                <!-- Textos Persuasivos -->
-                <div>
-                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mb-6 leading-tight">
-                        Área <span class="text-brand-gold border-b-4 border-brand-gold/30">Gourmet</span>.
-                    </h2>
-                    
-                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
-                        
-                        <div class="font-medium text-brand-navy border-l-4 border-brand-gold pl-4 bg-brand-light p-4 rounded-r-md flex flex-col gap-2">
-                            <p>• Estrutura completa equipada com churrasqueira, pia e bancada integradas.</p>
-                            <p>• Fechamento com portas de vidro deslizantes, permitindo adaptar o uso do espaço.</p>
-                            <p>• Ambiente coberto com área suficiente para acomodar mesa de jantar e receber convidados.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    imovelDots.forEach((dot, index) => {
+                        dot.addEventListener('click', () => {
+                            currIndex = index;
+                            showImovelSlide(currIndex);
+                        });
+                    });
+                }
+            });
+        </script>
     </section>
 
     <section id="beneficios" class="py-24 bg-brand-light">
